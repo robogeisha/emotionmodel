@@ -52,13 +52,13 @@ audio {
 
 /* ─── TABLE & RESPONSIVENESS ───────────────────────────────────────────────── */
 .table-wrapper {
-  overflow-x: auto;
+  overflow-x: auto;  /* allows scrolling if something truly overflows */
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* fixes column widths, allows wrapping */
+  table-layout: fixed; /* fixes column widths */
 }
 
 th, td {
@@ -66,11 +66,11 @@ th, td {
   padding: 0.5rem;
   text-align: center;
 
-  /* allow wrapping at spaces only, never mid-word */
+  /* wrap only at spaces—never break a word */
   white-space: normal;
-  word-break: normal;         /* no mid-word breaks */
-  overflow-wrap: break-word;  /* wrap at last space; break only if word too long */
-  hyphens: none;              /* no automatic hyphenation */
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
 }
 
 /* ─── EMOTION NAMES COLUMN ─────────────────────────────────────────────────── */
@@ -137,6 +137,5 @@ a:hover {
   }
   th:first-child, td:first-child {
     width: 40%;           /* more room for names */
-    /* you can adjust font-size here too if needed */
   }
 }

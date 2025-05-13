@@ -17,7 +17,6 @@
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 0.6rem;  /* 90% of the default size */
   background: var(--bg);
   color: var(--text);
   margin: 0;
@@ -74,9 +73,11 @@ th, td {
   hyphens: auto;            /* optional, for hyphenation */
 }
 
+/* ─── EMOTION NAMES COLUMN ─────────────────────────────────────────────────── */
 th:first-child, td:first-child {
   text-align: left;
   width: 30%;
+  font-size: 0.9rem;        /* slightly smaller font for names */
 }
 
 thead th {
@@ -131,29 +132,22 @@ a:hover {
 /* ─── MOBILE TWEAKS ─────────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   th, td {
-    font-size: 0.9rem;    /* slightly smaller text */
+    font-size: 0.9rem;    /* slightly smaller for all table text */
     padding: 0.3rem;      /* tighter cells */
   }
   th:first-child, td:first-child {
-    width: 40%;           /* more room for labels */
+    width: 40%;           /* more room for names */
+    /* you can adjust font-size here too if needed */
   }
 }
 
 /* ─── FORCE BREAKS ON LONG EMOTION NAMES ─────────────────────────────────── */
 th, td {
-  /* ensure wrapping rules override any earlier declarations */
   white-space: normal !important;
-
-  /* legacy & modern wrapping */
-  word-wrap: break-word;        /* older WebKit, IE */
-  overflow-wrap: break-word;    /* modern browsers */
-
-  /* absolutely force breaks if words still too long */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   word-break: break-all;
-
-  /* vendor-prefix hyphenation */
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
 }
-

@@ -66,11 +66,11 @@ th, td {
   padding: 0.5rem;
   text-align: center;
 
-  /* allow text to wrap instead of overflow */
+  /* allow wrapping at spaces only, never mid-word */
   white-space: normal;
-  overflow-wrap: anywhere;  /* modern browsers */
-  word-break: break-word;   /* fallback */
-  hyphens: auto;            /* optional, for hyphenation */
+  word-break: normal;         /* no mid-word breaks */
+  overflow-wrap: break-word;  /* wrap at last space; break only if word too long */
+  hyphens: none;              /* no automatic hyphenation */
 }
 
 /* ─── EMOTION NAMES COLUMN ─────────────────────────────────────────────────── */
@@ -139,15 +139,4 @@ a:hover {
     width: 40%;           /* more room for names */
     /* you can adjust font-size here too if needed */
   }
-}
-
-/* ─── FORCE BREAKS ON LONG EMOTION NAMES ─────────────────────────────────── */
-th, td {
-  white-space: normal !important;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  word-break: break-all;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
 }

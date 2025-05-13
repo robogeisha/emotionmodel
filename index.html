@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>GEMS Emotional Response Test</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>GEMS</h1>
+
+
+    <form id="gems-form">
+      <p class="instructions">
+        To what extent did you feel the following emotions while listening to the piece?<br>
+        <strong>Scale:</strong> 0 = Not at all ⋯ 4 = Extremely  (<em>leave blank for no answer</em>)
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Emotion</th>
+              <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Joyful -->
+            <tr>
+              <td>Happy</td>
+              <td><input type="radio" name="happy" value="0"></td>
+              <td><input type="radio" name="happy" value="1"></td>
+              <td><input type="radio" name="happy" value="2"></td>
+              <td><input type="radio" name="happy" value="3"></td>
+              <td><input type="radio" name="happy" value="4"></td>
+            </tr>
+            <tr>
+              <td>Amazed</td>
+              <td><input type="radio" name="amazed" value="0"></td>
+              <td><input type="radio" name="amazed" value="1"></td>
+              <td><input type="radio" name="amazed" value="2"></td>
+              <td><input type="radio" name="amazed" value="3"></td>
+              <td><input type="radio" name="amazed" value="4"></td>
+            </tr>
+            <tr>
+              <td>Dazzled</td>
+              <td><input type="radio" name="dazzled" value="0"></td>
+              <td><input type="radio" name="dazzled" value="1"></td>
+              <td><input type="radio" name="dazzled" value="2"></td>
+              <td><input type="radio" name="dazzled" value="3"></td>
+              <td><input type="radio" name="dazzled" value="4"></td>
+            </tr>
+            <tr>
+              <td>Allured</td>
+              <td><input type="radio" name="allured" value="0"></td>
+              <td><input type="radio" name="allured" value="1"></td>
+              <td><input type="radio" name="allured" value="2"></td>
+              <td><input type="radio" name="allured" value="3"></td>
+              <td><input type="radio" name="allured" value="4"></td>
+            </tr>
+            <tr>
+              <td>Moved</td>
+              <td><input type="radio" name="moved" value="0"></td>
+              <td><input type="radio" name="moved" value="1"></td>
+              <td><input type="radio" name="moved" value="2"></td>
+              <td><input type="radio" name="moved" value="3"></td>
+              <td><input type="radio" name="moved" value="4"></td>
+            </tr>
+
+            <!-- Inspired -->
+            <tr>
+              <td>Inspired</td>
+              <td><input type="radio" name="inspired" value="0"></td>
+              <td><input type="radio" name="inspired" value="1"></td>
+              <td><input type="radio" name="inspired" value="2"></td>
+              <td><input type="radio" name="inspired" value="3"></td>
+              <td><input type="radio" name="inspired" value="4"></td>
+            </tr>
+            <tr>
+              <td>Feeling of transcendence</td>
+              <td><input type="radio" name="feeling_of_transcendence" value="0"></td>
+              <td><input type="radio" name="feeling_of_transcendence" value="1"></td>
+              <td><input type="radio" name="feeling_of_transcendence" value="2"></td>
+              <td><input type="radio" name="feeling_of_transcendence" value="3"></td>
+              <td><input type="radio" name="feeling_of_transcendence" value="4"></td>
+            </tr>
+            <tr>
+              <td>Feeling of spirituality</td>
+              <td><input type="radio" name="feeling_of_spirituality" value="0"></td>
+              <td><input type="radio" name="feeling_of_spirituality" value="1"></td>
+              <td><input type="radio" name="feeling_of_spirituality" value="2"></td>
+              <td><input type="radio" name="feeling_of_spirituality" value="3"></td>
+              <td><input type="radio" name="feeling_of_spirituality" value="4"></td>
+            </tr>
+            <tr>
+              <td>Thrills</td>
+              <td><input type="radio" name="thrills" value="0"></td>
+              <td><input type="radio" name="thrills" value="1"></td>
+              <td><input type="radio" name="thrills" value="2"></td>
+              <td><input type="radio" name="thrills" value="3"></td>
+              <td><input type="radio" name="thrills" value="4"></td>
+            </tr>
+
+            <!-- Loving -->
+            <tr>
+              <td>In love</td>
+              <td><input type="radio" name="in_love" value="0"></td>
+              <td><input type="radio" name="in_love" value="1"></td>
+              <td><input type="radio" name="in_love" value="2"></td>
+              <td><input type="radio" name="in_love" value="3"></td>
+              <td><input type="radio" name="in_love" value="4"></td>
+            </tr>
+            <tr>
+              <td>Affectionate</td>
+              <td><input type="radio" name="affectionate" value="0"></td>
+              <td><input type="radio" name="affectionate" value="1"></td>
+              <td><input type="radio" name="affectionate" value="2"></td>
+              <td><input type="radio" name="affectionate" value="3"></td>
+              <td><input type="radio" name="affectionate" value="4"></td>
+            </tr>
+            <tr>
+              <td>Sensual</td>
+              <td><input type="radio" name="sensual" value="0"></td>
+              <td><input type="radio" name="sensual" value="1"></td>
+              <td><input type="radio" name="sensual" value="2"></td>
+              <td><input type="radio" name="sensual" value="3"></td>
+              <td><input type="radio" name="sensual" value="4"></td>
+            </tr>
+            <tr>
+              <td>Tender</td>
+              <td><input type="radio" name="tender" value="0"></td>
+              <td><input type="radio" name="tender" value="1"></td>
+              <td><input type="radio" name="tender" value="2"></td>
+              <td><input type="radio" name="tender" value="3"></td>
+              <td><input type="radio" name="tender" value="4"></td>
+            </tr>
+            <tr>
+              <td>Softened-up</td>
+              <td><input type="radio" name="softened_up" value="0"></td>
+              <td><input type="radio" name="softened_up" value="1"></td>
+              <td><input type="radio" name="softened_up" value="2"></td>
+              <td><input type="radio" name="softened_up" value="3"></td>
+              <td><input type="radio" name="softened_up" value="4"></td>
+            </tr>
+
+            <!-- Nostalgic -->
+            <tr>
+              <td>Sentimental</td>
+              <td><input type="radio" name="sentimental" value="0"></td>
+              <td><input type="radio" name="sentimental" value="1"></td>
+              <td><input type="radio" name="sentimental" value="2"></td>
+              <td><input type="radio" name="sentimental" value="3"></td>
+              <td><input type="radio" name="sentimental" value="4"></td>
+            </tr>
+            <tr>
+              <td>Dreamy</td>
+              <td><input type="radio" name="dreamy" value="0"></td>
+              <td><input type="radio" name="dreamy" value="1"></td>
+              <td><input type="radio" name="dreamy" value="2"></td>
+              <td><input type="radio" name="dreamy" value="3"></td>
+              <td><input type="radio" name="dreamy" value="4"></td>
+            </tr>
+            <tr>
+              <td>Nostalgic</td>
+              <td><input type="radio" name="nostalgic" value="0"></td>
+              <td><input type="radio" name="nostalgic" value="1"></td>
+              <td><input type="radio" name="nostalgic" value="2"></td>
+              <td><input type="radio" name="nostalgic" value="3"></td>
+              <td><input type="radio" name="nostalgic" value="4"></td>
+            </tr>
+            <tr>
+              <td>Melancholic</td>
+              <td><input type="radio" name="melancholic" value="0"></td>
+              <td><input type="radio" name="melancholic" value="1"></td>
+              <td><input type="radio" name="melancholic" value="2"></td>
+              <td><input type="radio" name="melancholic" value="3"></td>
+              <td><input type="radio" name="melancholic" value="4"></td>
+            </tr>
+
+            <!-- Peaceful -->
+            <tr>
+              <td>Calm</td>
+              <td><input type="radio" name="calm" value="0"></td>
+              <td><input type="radio" name="calm" value="1"></td>
+              <td><input type="radio" name="calm" value="2"></td>
+              <td><input type="radio" name="calm" value="3"></td>
+              <td><input type="radio" name="calm" value="4"></td>
+            </tr>
+            <tr>
+              <td>Relaxed</td>
+              <td><input type="radio" name="relaxed" value="0"></td>
+              <td><input type="radio" name="relaxed" value="1"></td>
+              <td><input type="radio" name="relaxed" value="2"></td>
+              <td><input type="radio" name="relaxed" value="3"></td>
+              <td><input type="radio" name="relaxed" value="4"></td>
+            </tr>
+            <tr>
+              <td>Serene</td>
+              <td><input type="radio" name="serene" value="0"></td>
+              <td><input type="radio" name="serene" value="1"></td>
+              <td><input type="radio" name="serene" value="2"></td>
+              <td><input type="radio" name="serene" value="3"></td>
+              <td><input type="radio" name="serene" value="4"></td>
+            </tr>
+            <tr>
+              <td>Soothed</td>
+              <td><input type="radio" name="soothed" value="0"></td>
+              <td><input type="radio" name="soothed" value="1"></td>
+              <td><input type="radio" name="soothed" value="2"></td>
+              <td><input type="radio" name="soothed" value="3"></td>
+              <td><input type="radio" name="soothed" value="4"></td>
+            </tr>
+            <tr>
+              <td>Meditative</td>
+              <td><input type="radio" name="meditative" value="0"></td>
+              <td><input type="radio" name="meditative" value="1"></td>
+              <td><input type="radio" name="meditative" value="2"></td>
+              <td><input type="radio" name="meditative" value="3"></td>
+              <td><input type="radio" name="meditative" value="4"></td>
+            </tr>
+
+            <!-- Empowered -->
+            <tr>
+              <td>Energetic</td>
+              <td><input type="radio" name="energetic" value="0"></td>
+              <td><input type="radio" name="energetic" value="1"></td>
+              <td><input type="radio" name="energetic" value="2"></td>
+              <td><input type="radio" name="energetic" value="3"></td>
+              <td><input type="radio" name="energetic" value="4"></td>
+            </tr>
+            <tr>
+              <td>Triumphant</td>
+              <td><input type="radio" name="triumphant" value="0"></td>
+              <td><input type="radio" name="triumphant" value="1"></td>
+              <td><input type="radio" name="triumphant" value="2"></td>
+              <td><input type="radio" name="triumphant" value="3"></td>
+              <td><input type="radio" name="triumphant" value="4"></td>
+            </tr>
+            <tr>
+              <td>Fiery</td>
+              <td><input type="radio" name="fiery" value="0"></td>
+              <td><input type="radio" name="fiery" value="1"></td>
+              <td><input type="radio" name="fiery" value="2"></td>
+              <td><input type="radio" name="fiery" value="3"></td>
+              <td><input type="radio" name="fiery" value="4"></td>
+            </tr>
+            <tr>
+              <td>Strong</td>
+              <td><input type="radio" name="strong" value="0"></td>
+              <td><input type="radio" name="strong" value="1"></td>
+              <td><input type="radio" name="strong" value="2"></td>
+              <td><input type="radio" name="strong" value="3"></td>
+              <td><input type="radio" name="strong" value="4"></td>
+            </tr>
+            <tr>
+              <td>Heroic</td>
+              <td><input type="radio" name="heroic" value="0"></td>
+              <td><input type="radio" name="heroic" value="1"></td>
+              <td><input type="radio" name="heroic" value="2"></td>
+              <td><input type="radio" name="heroic" value="3"></td>
+              <td><input type="radio" name="heroic" value="4"></td>
+            </tr>
+                        <!-- Empowered -->
+            <tr>
+              <td>Stimulated</td>
+              <td><input type="radio" name="stimulated" value="0"></td>
+              <td><input type="radio" name="stimulated" value="1"></td>
+              <td><input type="radio" name="stimulated" value="2"></td>
+              <td><input type="radio" name="stimulated" value="3"></td>
+              <td><input type="radio" name="stimulated" value="4"></td>
+            </tr>
+            <tr>
+              <td>Joyful</td>
+              <td><input type="radio" name="joyful" value="0"></td>
+              <td><input type="radio" name="joyful" value="1"></td>
+              <td><input type="radio" name="joyful" value="2"></td>
+              <td><input type="radio" name="joyful" value="3"></td>
+              <td><input type="radio" name="joyful" value="4"></td>
+            </tr>
+            <tr>
+              <td>Animated</td>
+              <td><input type="radio" name="animated" value="0"></td>
+              <td><input type="radio" name="animated" value="1"></td>
+              <td><input type="radio" name="animated" value="2"></td>
+              <td><input type="radio" name="animated" value="3"></td>
+              <td><input type="radio" name="animated" value="4"></td>
+            </tr>
+            <tr>
+              <td>Dancing</td>
+              <td><input type="radio" name="dancing" value="0"></td>
+              <td><input type="radio" name="dancing" value="1"></td>
+              <td><input type="radio" name="dancing" value="2"></td>
+              <td><input type="radio" name="dancing" value="3"></td>
+              <td><input type="radio" name="dancing" value="4"></td>
+            </tr>
+            <tr>
+              <td>Amused</td>
+              <td><input type="radio" name="amused" value="0"></td>
+              <td><input type="radio" name="amused" value="1"></td>
+              <td><input type="radio" name="amused" value="2"></td>
+              <td><input type="radio" name="amused" value="3"></td>
+              <td><input type="radio" name="amused" value="4"></td>
+            </tr>
+            
+            
+            
+                        <tr>
+              <td>Agitated</td>
+              <td><input type="radio" name="agitated" value="0"></td>
+              <td><input type="radio" name="agitated" value="1"></td>
+              <td><input type="radio" name="agitated" value="2"></td>
+              <td><input type="radio" name="agitated" value="3"></td>
+              <td><input type="radio" name="agitated" value="4"></td>
+            </tr>
+            <tr>
+              <td>Nervous</td>
+              <td><input type="radio" name="nervous" value="0"></td>
+              <td><input type="radio" name="nervous" value="1"></td>
+              <td><input type="radio" name="nervous" value="2"></td>
+              <td><input type="radio" name="nervous" value="3"></td>
+              <td><input type="radio" name="nervous" value="4"></td>
+            </tr>
+            <tr>
+              <td>Tense</td>
+              <td><input type="radio" name="tense" value="0"></td>
+              <td><input type="radio" name="tense" value="1"></td>
+              <td><input type="radio" name="tense" value="2"></td>
+              <td><input type="radio" name="tense" value="3"></td>
+              <td><input type="radio" name="tense" value="4"></td>
+            </tr>
+            <tr>
+              <td>Impatient</td>
+              <td><input type="radio" name="impatient" value="0"></td>
+              <td><input type="radio" name="impatient" value="1"></td>
+              <td><input type="radio" name="impatient" value="2"></td>
+              <td><input type="radio" name="impatient" value="3"></td>
+              <td><input type="radio" name="impatient" value="4"></td>
+            </tr>
+            <tr>
+              <td>Irritated</td>
+              <td><input type="radio" name="irritated" value="0"></td>
+              <td><input type="radio" name="irritated" value="1"></td>
+              <td><input type="radio" name="irritated" value="2"></td>
+              <td><input type="radio" name="irritated" value="3"></td>
+              <td><input type="radio" name="irritated" value="4"></td>
+            </tr>
+             <tr>
+              <td>Sad</td>
+              <td><input type="radio" name="sad" value="0"></td>
+              <td><input type="radio" name="sad" value="1"></td>
+              <td><input type="radio" name="sad" value="2"></td>
+              <td><input type="radio" name="sad" value="3"></td>
+              <td><input type="radio" name="sad" value="4"></td>
+            </tr>
+            <tr>
+              <td>Sorrowful</td>
+              <td><input type="radio" name="sorrowful" value="0"></td>
+              <td><input type="radio" name="sorrowful" value="1"></td>
+              <td><input type="radio" name="sorrowful" value="2"></td>
+              <td><input type="radio" name="sorrowful" value="3"></td>
+              <td><input type="radio" name="sorrowful" value="4"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button type="submit">Submit Responses</button>
+    </form>
+  </div>
+</body>
+</html>
+

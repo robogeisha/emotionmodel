@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Valence &amp; Arousal</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Valence &amp; Arousal</h1>
+
+
+    <form id="valence-form">
+      <p class="instructions">
+        “How pleasant did you find the music?”<br>
+        “How aroused or activated did you feel while listening?”<br>
+        <strong>Scale:</strong> 0 = Not at all ⋯ 4 = Extremely  (<em>leave blank for no answer</em>)
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pleasantness (valence)</td>
+              <td><input type="radio" name="valence" value="0"></td>
+              <td><input type="radio" name="valence" value="1"></td>
+              <td><input type="radio" name="valence" value="2"></td>
+              <td><input type="radio" name="valence" value="3"></td>
+              <td><input type="radio" name="valence" value="4"></td>
+            </tr>
+            <tr>
+              <td>Arousal (activation)</td>
+              <td><input type="radio" name="arousal" value="0"></td>
+              <td><input type="radio" name="arousal" value="1"></td>
+              <td><input type="radio" name="arousal" value="2"></td>
+              <td><input type="radio" name="arousal" value="3"></td>
+              <td><input type="radio" name="arousal" value="4"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button type="submit">Submit Valence/Arousal</button>
+    </form>
+  </div>
+</body>
+</html>
+

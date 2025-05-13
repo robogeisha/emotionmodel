@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Basic Emotions Model</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Basic Emotions </h1>
+
+
+    <form id="basic-form">
+      <p class="instructions">
+        For each emotion, rate how strongly you felt it:<br>
+        <strong>Scale:</strong> 0 = Not at all ⋯ 4 = Extremely  (<em>leave blank for no answer</em>)
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Emotion</th>
+              <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Happiness</td>
+              <td><input type="radio" name="happiness" value="0"></td>
+              <td><input type="radio" name="happiness" value="1"></td>
+              <td><input type="radio" name="happiness" value="2"></td>
+              <td><input type="radio" name="happiness" value="3"></td>
+              <td><input type="radio" name="happiness" value="4"></td>
+            </tr>
+            <tr>
+              <td>Sadness</td>
+              <td><input type="radio" name="sadness" value="0"></td>
+              <td><input type="radio" name="sadness" value="1"></td>
+              <td><input type="radio" name="sadness" value="2"></td>
+              <td><input type="radio" name="sadness" value="3"></td>
+              <td><input type="radio" name="sadness" value="4"></td>
+            </tr>
+            <tr>
+              <td>Anger</td>
+              <td><input type="radio" name="anger" value="0"></td>
+              <td><input type="radio" name="anger" value="1"></td>
+              <td><input type="radio" name="anger" value="2"></td>
+              <td><input type="radio" name="anger" value="3"></td>
+              <td><input type="radio" name="anger" value="4"></td>
+            </tr>
+            <tr>
+              <td>Fear</td>
+              <td><input type="radio" name="fear" value="0"></td>
+              <td><input type="radio" name="fear" value="1"></td>
+              <td><input type="radio" name="fear" value="2"></td>
+              <td><input type="radio" name="fear" value="3"></td>
+              <td><input type="radio" name="fear" value="4"></td>
+            </tr>
+            <tr>
+              <td>Disgust</td>
+              <td><input type="radio" name="disgust" value="0"></td>
+              <td><input type="radio" name="disgust" value="1"></td>
+              <td><input type="radio" name="disgust" value="2"></td>
+              <td><input type="radio" name="disgust" value="3"></td>
+              <td><input type="radio" name="disgust" value="4"></td>
+            </tr>
+            <tr>
+              <td>Surprise</td>
+              <td><input type="radio" name="surprise" value="0"></td>
+              <td><input type="radio" name="surprise" value="1"></td>
+              <td><input type="radio" name="surprise" value="2"></td>
+              <td><input type="radio" name="surprise" value="3"></td>
+              <td><input type="radio" name="surprise" value="4"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button type="submit">Submit Basic Emotions</button>
+    </form>
+  </div>
+</body>
+</html>
+

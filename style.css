@@ -1,13 +1,13 @@
 /* ─── DARK-MODE PALETTE ───────────────────────────────────────────────────────── */
 :root {
-  --bg: #000;              /* page background */
-  --text: #fff;            /* main text */
-  --container-bg: #111;    /* card/panel bg */
-  --surface: #1a1a1a;      /* table header, inputs, etc. */
-  --border: #333;          /* borders & dividers */
-  --button-bg: #8e44ad;    /* button bg */
-  --button-hover: #8e44ad; /* hover state */
-  --shadow: rgba(255,255,255,0.05); /* subtle light shadow */
+  --bg: #000;
+  --text: #fff;
+  --container-bg: #111;
+  --surface: #1a1a1a;
+  --border: #333;
+  --button-bg: #8e44ad;
+  --button-hover: #8e44ad;
+  --shadow: rgba(255,255,255,0.05);
 }
 
 /* ─── GLOBAL RESET ───────────────────────────────────────────────────────────── */
@@ -52,13 +52,13 @@ audio {
 
 /* ─── TABLE & RESPONSIVENESS ───────────────────────────────────────────────── */
 .table-wrapper {
-  overflow-x: auto;  /* allows scrolling if something truly overflows */
+  overflow-x: auto;  /* allow scroll if content still overflows */
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* fixes column widths */
+  table-layout: fixed; /* fixed by default for desktop */
 }
 
 th, td {
@@ -66,18 +66,18 @@ th, td {
   padding: 0.5rem;
   text-align: center;
 
-  /* wrap only at spaces—never break a word */
-  white-space: normal;
-  word-break: normal;
-  overflow-wrap: normal;
-  hyphens: none;
+  /* wrap only at spaces — never break inside a word */
+  white-space: normal !important;
+  word-break: keep-all !important;       /* no mid-word breaks */
+  overflow-wrap: break-word !important;  /* wrap at spaces, break only if word > cell */
+  hyphens: none !important;
 }
 
 /* ─── EMOTION NAMES COLUMN ─────────────────────────────────────────────────── */
 th:first-child, td:first-child {
   text-align: left;
   width: 30%;
-  font-size: 0.9rem;        /* slightly smaller font for names */
+  font-size: 0.9rem;  /* slightly smaller for names */
 }
 
 thead th {
@@ -129,13 +129,17 @@ a:hover {
   color: var(--button-hover);
 }
 
-/* ─── MOBILE TWEAKS ─────────────────────────────────────────────────────────── */
+/* ─── MOBILE OVERRIDES ─────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
+  /* let columns size to content, so whole words move rather than split */
+  table {
+    table-layout: auto !important;
+  }
   th, td {
-    font-size: 0.9rem;    /* slightly smaller for all table text */
-    padding: 0.3rem;      /* tighter cells */
+    font-size: 0.9rem;  /* shrink text slightly */
+    padding: 0.3rem;    /* tighten cells */
   }
   th:first-child, td:first-child {
-    width: 40%;           /* more room for names */
+    width: auto !important; /* let browser size label column */
   }
 }

@@ -1,15 +1,16 @@
-/* define your dark-mode palette */
+/* ─── DARK-MODE PALETTE ───────────────────────────────────────────────────────── */
 :root {
   --bg: #000;              /* page background */
   --text: #fff;            /* main text */
   --container-bg: #111;    /* card/panel bg */
   --surface: #1a1a1a;      /* table header, inputs, etc. */
   --border: #333;          /* borders & dividers */
-  --button-bg: #8e44ad;    /* button bg (you can keep or tweak) */
+  --button-bg: #8e44ad;    /* button bg */
   --button-hover: #8e44ad; /* hover state */
   --shadow: rgba(255,255,255,0.05); /* subtle light shadow */
 }
 
+/* ─── GLOBAL RESET ───────────────────────────────────────────────────────────── */
 * {
   box-sizing: border-box;
 }
@@ -31,14 +32,10 @@ body {
   box-shadow: 0 2px 8px var(--shadow);
 }
 
+/* ─── TYPOGRAPHY ─────────────────────────────────────────────────────────────── */
 h1 {
   text-align: center;
   margin-bottom: 1rem;
-}
-
-audio {
-  display: block;
-  margin: 1rem auto 2rem;
 }
 
 .instructions {
@@ -47,6 +44,13 @@ audio {
   margin-bottom: 1rem;
 }
 
+/* ─── AUDIO PLAYER ─────────────────────────────────────────────────────────── */
+audio {
+  display: block;
+  margin: 1rem auto 2rem;
+}
+
+/* ─── TABLE & RESPONSIVENESS ───────────────────────────────────────────────── */
 .table-wrapper {
   overflow-x: auto;
 }
@@ -54,13 +58,19 @@ audio {
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
+  table-layout: fixed; /* fixes column widths, allows wrapping */
 }
 
 th, td {
   border: 1px solid var(--border);
   padding: 0.5rem;
   text-align: center;
+
+  /* allow text to wrap instead of overflow */
+  white-space: normal;
+  overflow-wrap: anywhere;  /* modern browsers */
+  word-break: break-word;   /* fallback */
+  hyphens: auto;            /* optional, for hyphenation */
 }
 
 th:first-child, td:first-child {
@@ -72,6 +82,7 @@ thead th {
   background: var(--surface);
 }
 
+/* ─── BUTTON ───────────────────────────────────────────────────────────────── */
 button {
   display: block;
   margin: 2rem auto 0;
@@ -88,8 +99,7 @@ button:hover {
   background: var(--button-hover);
 }
 
-/* ─── LINK STYLING ───────────────────────────────────────────────────────────── */
-
+/* ─── LINKS ────────────────────────────────────────────────────────────────── */
 a {
   color: var(--text);
   text-decoration: none;
@@ -101,7 +111,6 @@ a:hover {
 }
 
 /* ─── NAVIGATION BAR ───────────────────────────────────────────────────────── */
-
 .navigation {
   color: var(--text);
   text-align: center;
@@ -116,5 +125,16 @@ a:hover {
 
 .navigation a:hover {
   color: var(--button-hover);
+}
+
+/* ─── MOBILE TWEAKS ─────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  th, td {
+    font-size: 0.9rem;    /* slightly smaller text */
+    padding: 0.3rem;      /* tighter cells */
+  }
+  th:first-child, td:first-child {
+    width: 40%;           /* more room for labels */
+  }
 }
 

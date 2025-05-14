@@ -52,36 +52,39 @@ audio {
 
 /* ─── TABLE & RESPONSIVENESS ───────────────────────────────────────────────── */
 .table-wrapper {
-  overflow-x: auto;  /* allow scroll if content still overflows */
+  overflow-x: auto;  /* horizontal scroll if needed */
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* fixed by default for desktop */
+  table-layout: fixed;
 }
 
 th, td {
   border: 1px solid var(--border);
   padding: 0.5rem;
   text-align: center;
-
-  /* wrap only at spaces — never break inside a word */
-  white-space: normal !important;
-  word-break: keep-all !important;       /* no mid-word breaks */
-  overflow-wrap: break-word !important;  /* wrap at spaces, break only if word > cell */
-  hyphens: none !important;
+  white-space: normal;
+  word-break: keep-all;        /* no mid-word breaks */
+  overflow-wrap: break-word;
+  hyphens: none;
 }
 
 /* ─── EMOTION NAMES COLUMN ─────────────────────────────────────────────────── */
 th:first-child, td:first-child {
   text-align: left;
   width: 30%;
-  font-size: 0.9rem;  /* slightly smaller for names */
+  font-size: 0.9rem;
 }
 
-thead th {
-  background: var(--surface);
+/* ─── HEADER CLARIFICATIONS ───────────────────────────────────────────────── */
+/* only affect the top-row cells except the first one */
+thead th:not(:first-child) {
+  font-size: 0.75rem;       /* shrink text */
+  padding: 0.3rem;          /* reduce padding */
+  line-height: 1.2;
+  white-space: nowrap;      /* never wrap, force scroll if too long */
 }
 
 /* ─── BUTTON ───────────────────────────────────────────────────────────────── */
@@ -131,15 +134,20 @@ a:hover {
 
 /* ─── MOBILE OVERRIDES ─────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
-  /* let columns size to content, so whole words move rather than split */
   table {
-    table-layout: auto !important;
+    table-layout: auto !important; /* allow columns to expand to fit */
   }
   th, td {
-    font-size: 0.9rem;  /* shrink text slightly */
-    padding: 0.3rem;    /* tighten cells */
+    font-size: 0.85rem;
+    padding: 0.3rem;
   }
   th:first-child, td:first-child {
-    width: auto !important; /* let browser size label column */
+    width: auto !important;
+  }
+  /* allow header clarifications to wrap on very narrow screens */
+  thead th:not(:first-child) {
+    font-size: 0.65rem;
+    white-space: normal;
+    line-height: 1.1;
   }
 }
